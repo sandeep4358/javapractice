@@ -18,7 +18,7 @@ public class EmployeeDao {
 	 * 
 	 * @return random list of employees
 	 */
-	public List<Employee> loadEmployeesFromDBRangeWise() {
+	public static List<Employee> loadEmployeesFromDBRangeWise() {
 		return IntStream.rangeClosed(1, 10).mapToObj(i -> new Employee(i, "employee" + i, new Random().nextInt(5000)))
 				.collect(Collectors.toList());
 	}
@@ -28,7 +28,7 @@ public class EmployeeDao {
 	 * @return  retrun employee list
 	 */
 
-	public List<Employee> loadEmployeesFromDB() {
+	public static List<Employee> loadEmployeesFromDB() {
 
 		List<Employee> emplist = new ArrayList<Employee>();
 
